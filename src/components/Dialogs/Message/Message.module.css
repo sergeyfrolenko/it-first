@@ -1,0 +1,16 @@
+.message {
+  display: flex;
+  flex-direction: row;
+}
+.ava {
+  width: 200px;
+  margin-right: 20px;
+}
+.ava img {
+  width: 100%;
+}
+.text {
+  display: flex;
+  align-items: center;
+  color: #111;
+}

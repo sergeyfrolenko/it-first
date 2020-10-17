@@ -1,0 +1,15 @@
+.dialogs {
+  display: flex;
+  flex-direction: row;
+}
+
+.names {
+  width: 200px;
+  border-right: 1px dotted coral;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
