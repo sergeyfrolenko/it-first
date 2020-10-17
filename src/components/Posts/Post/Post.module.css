@@ -1,0 +1,20 @@
+.post {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.post__ava {
+  width: 100px;
+}
+.content {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: slateblue;
+}
+.title {
+  font-size: 2em;
+  color: #111;
+}
+.text {
+  font-size: 1.4em;
+}

@@ -1,0 +1,10 @@
+.aside {
+  grid-area: a;
+  background: #eee;
+}
+.nav {
+  text-decoration: none;
+}
+.active {
+  font-weight: bold;
+}
