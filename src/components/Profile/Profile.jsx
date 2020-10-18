@@ -5,6 +5,7 @@ import profile from './Profile.module.css';
 import Posts from './../Posts/Posts'
 
 const Profile = (props) => {
+
   return (
     <main className={profile.main}>
       <div>
@@ -16,7 +17,7 @@ const Profile = (props) => {
         </div>
         <div className={profile.user__desc}></div>
       </div>
-      <Posts data={props.data} />
+      <Posts state={props.state} />
     </main>
   )
 }

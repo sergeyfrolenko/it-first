@@ -6,9 +6,10 @@ import Post from './Post/Post';
 import AddPost from './AddPost/AddPost';
 
 const Posts = (props) => {
+
   const getPosts = () => {
     return (
-      props.data.map((el, key) => {
+      props.state.posts.map((el, key) => {
         return <Post key={key} msg={el.msg} title={el.title} likes={el.likes} />
       })
     )

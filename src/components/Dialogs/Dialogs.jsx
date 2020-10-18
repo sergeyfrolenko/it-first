@@ -8,7 +8,7 @@ import Message from './Message/Message';
 const Dialogs = (props) => {
   let getMsgs = () => {
     return (
-      props.data.msgsData.map((el, key) => {
+      props.state.msgsData.map((el, key) => {
         return <Message key={key} msg={el.msg} />
       })
     )
@@ -16,7 +16,7 @@ const Dialogs = (props) => {
 
   let getNames = () => {
     return (
-      props.data.namesData.map((el, key) => {
+      props.state.namesData.map((el, key) => {
         return <Name key={key} name={el.name} link={el.id} />
       })
     )

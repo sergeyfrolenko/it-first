@@ -2,9 +2,12 @@ import React from 'react'
 import aside from './Aside.module.css'
 import { NavLink } from 'react-router-dom'
 
-const Aside = () => {
+import Friends from './Friends/Friends'
+
+const Aside = (props) => {
   return (
     <aside className={aside.aside}>
+      <h3 className={aside.title}>Navigation</h3>
       <nav>
         <ul>
           <li><NavLink to="/profile" activeClassName={aside.active}>Profile</NavLink></li>
@@ -14,6 +17,10 @@ const Aside = () => {
           <li><NavLink to="/settings" activeClassName={aside.active}>Settings</NavLink></li>
         </ul>
       </nav>
+
+      <h3 className={aside.title}>Friends</h3>
+      <Friends state={props.state} />
+
     </aside>
   )
 }

@@ -4,27 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const data = {
-  namesData: [
-    { id: 1, name: 'One' },
-    { id: 2, name: 'Two' },
-    { id: 3, name: 'Three' }
-  ],
-  msgsData: [
-    { id: 1, msg: 'Hello Bro!' }
-  ],
-  posts: [
-    { id: 1, msg: "hello", title: "first", likes: 15 },
-    { id: 1, msg: "hi", title: "second", likes: 20 },
-    { id: 1, msg: "how are you?", title: "third", likes: 18 }
-  ]
-}
+import state from './redux/state'
 
 
 
 ReactDOM.render(
   < React.StrictMode >
-    <App data={data} />
+    <App state={state} />
   </React.StrictMode >,
   document.getElementById('root')
 );

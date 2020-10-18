@@ -14,16 +14,15 @@ import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 
 function App(props) {
-  const temp = props.data
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Aside />
+        <Aside state={props.state.asideModule} />
         <div className="content-wrapper">
-          <Route exact path="/" render={(p) => (<Profile data={props.data.posts} />)} />
-          <Route exact path="/profile" render={(p) => (<Profile data={props.data.posts} />)} />
-          <Route path="/dialogs" render={(p) => (<Dialogs {...props} />)} />
+          <Route exact path="/" render={(p) => (<Profile state={props.state.profilePage} />)} />
+          <Route path="/profile" render={(p) => (<Profile state={props.state.profilePage} />)} />
+          <Route path="/dialogs" render={(p) => (<Dialogs state={props.state.dialogsPage} />)} />
           <Route path="/news" component={News} />
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} />

@@ -4,7 +4,6 @@ import post from './Post.module.css';
 
 const Post = (props) => {
   return (
-
     <div className={post.post}>
       <div className={post.post__ava}>
         <img src="https://avavatar.ru/images/original/10/2VCBYKFkkb0veayT.jpg" alt="" />

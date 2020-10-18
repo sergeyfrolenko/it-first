@@ -8,3 +8,6 @@
 .active {
   font-weight: bold;
 }
+.title {
+  margin-left: 5px;
+}
