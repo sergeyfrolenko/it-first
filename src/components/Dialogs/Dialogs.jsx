@@ -4,6 +4,7 @@ import s from './Dialogs.module.css';
 
 import Name from './Name/Name';
 import Message from './Message/Message';
+import AddMessage from './AddMessage/AddMessage';
 
 const Dialogs = (props) => {
   let getMsgs = () => {
@@ -31,6 +32,7 @@ const Dialogs = (props) => {
       </div>
       <div className={s.messages}>
         {getMsgs()}
+        <AddMessage />
       </div>
     </div>
   )

@@ -17,7 +17,7 @@ const Posts = (props) => {
 
   return (
     <div>
-      <AddPost />
+      <AddPost addPost={props.addPost} />
       {getPosts()}
     </div>
   )

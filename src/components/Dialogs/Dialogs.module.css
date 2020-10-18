@@ -1,6 +1,7 @@
 .dialogs {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .names {
@@ -12,4 +13,5 @@
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  width: 100%;
 }
