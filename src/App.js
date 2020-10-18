@@ -13,15 +13,17 @@ import News from './components/News/News'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 
-function App() {
+function App(props) {
+  const temp = props.data
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
         <Aside />
         <div className="content-wrapper">
-          <Route path="/profile" component={Profile} />
-          <Route path="/dialogs" component={Dialogs} />
+          <Route exact path="/" render={(p) => (<Profile data={props.data.posts} />)} />
+          <Route exact path="/profile" render={(p) => (<Profile data={props.data.posts} />)} />
+          <Route path="/dialogs" render={(p) => (<Dialogs {...props} />)} />
           <Route path="/news" component={News} />
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} />

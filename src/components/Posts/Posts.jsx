@@ -5,13 +5,19 @@ import posts from './Posts.module.css';
 import Post from './Post/Post';
 import AddPost from './AddPost/AddPost';
 
-const Posts = () => {
+const Posts = (props) => {
+  const getPosts = () => {
+    return (
+      props.data.map((el, key) => {
+        return <Post key={key} msg={el.msg} title={el.title} likes={el.likes} />
+      })
+    )
+  }
+
   return (
     <div>
       <AddPost />
-      <Post msg="hello" title="first" likes="15" />
-      <Post msg="hi" title="second" likes="20" />
-      <Post msg="how are you?" title="third" likes="18" />
+      {getPosts()}
     </div>
   )
 }

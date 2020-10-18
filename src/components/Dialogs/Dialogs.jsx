@@ -5,15 +5,32 @@ import s from './Dialogs.module.css';
 import Name from './Name/Name';
 import Message from './Message/Message';
 
-const Dialogs = () => {
+const Dialogs = (props) => {
+  let getMsgs = () => {
+    return (
+      props.data.msgsData.map((el, key) => {
+        return <Message key={key} msg={el.msg} />
+      })
+    )
+  }
+
+  let getNames = () => {
+    return (
+      props.data.namesData.map((el, key) => {
+        return <Name key={key} name={el.name} link={el.id} />
+      })
+    )
+  }
+
   return (
+
     <div className={s.dialogs}>
       <div className={s.names}>
         <h3>Dialogs</h3>
-        <Name />
+        {getNames()}
       </div>
       <div className={s.messages}>
-        <Message />
+        {getMsgs()}
       </div>
     </div>
   )
