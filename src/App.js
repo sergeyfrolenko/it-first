@@ -20,9 +20,9 @@ function App(props) {
         <Header />
         <Aside state={props.state.asideModule} />
         <div className="content-wrapper">
-          <Route exact path="/" render={(p) => (<Profile state={props.state.profilePage} addPost={props.addPost} />)} />
-          <Route path="/profile" render={(p) => (<Profile state={props.state.profilePage} addPost={props.addPost} />)} />
-          <Route path="/dialogs" render={(p) => (<Dialogs state={props.state.dialogsPage} />)} />
+          <Route exact path="/" render={(p) => (<Profile state={props.state.profilePage} addPost={props.addPost} updateAddPostValue={props.updateAddPostValue} />)} />
+          <Route path="/profile" render={(p) => (<Profile state={props.state.profilePage} addPost={props.addPost} updateAddPostValue={props.updateAddPostValue} />)} />
+          <Route path="/dialogs" render={(p) => (<Dialogs state={props.state.dialogsPage} addMsg={props.addMsg} />)} />
           <Route path="/news" component={News} />
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} />

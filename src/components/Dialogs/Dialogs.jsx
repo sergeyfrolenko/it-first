@@ -32,7 +32,7 @@ const Dialogs = (props) => {
       </div>
       <div className={s.messages}>
         {getMsgs()}
-        <AddMessage />
+        <AddMessage addMsg={props.addMsg} />
       </div>
     </div>
   )
