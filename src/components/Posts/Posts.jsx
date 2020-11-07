@@ -17,7 +17,7 @@ const Posts = (props) => {
 
   return (
     <div>
-      <AddPost addPost={props.addPost} updateAddPostValue={props.updateAddPostValue} />
+      <AddPost state={props.state} dispatch={props.dispatch} />
       {getPosts()}
     </div>
   )

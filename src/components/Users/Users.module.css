@@ -1,0 +1,19 @@
+.users ul {
+  list-style: none;
+}
+
+.listItem {
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ava {
+  width: 100px;
+}
+.ava img {
+  width: 100%;
+}
