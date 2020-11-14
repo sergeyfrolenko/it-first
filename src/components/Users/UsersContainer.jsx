@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import { changeFollowAC, setUsersAC } from './../../redux/users-reducer';
+import { changeFollowAC, setUsersAC, setCurrentPageAC, handlerPaginationArrowAC } from './../../redux/users-reducer';
 
 import Users from './Users';
 
 let mapStateToProps = (state) => {
-
   return {
-    users: state.usersPage.users
+    users: state.usersPage.users,
+    currentPage: state.usersPage.currentPage
   }
 }
 let mapDispatchToProps = (dispatch) => {
@@ -18,6 +18,12 @@ let mapDispatchToProps = (dispatch) => {
     },
     setUsers: (data) => {
       dispatch(setUsersAC(data))
+    },
+    setCurrentPage: (num) => {
+      dispatch(setCurrentPageAC(num))
+    },
+    handlerPaginationArrow: (btn) => {
+      dispatch(handlerPaginationArrowAC(btn))
     }
   }
 }
